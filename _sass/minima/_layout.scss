@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 1ch;
+  font-size: 1ex;
 
   justify-content: space-between;
   align-items: center;
@@ -36,6 +36,11 @@
     a {
       @include btn($lm-link-base-color, $lm-highligh-color);
     }
+  }
+}
+@media screen and (max-width:420px) {
+  .nav-bar {
+
   }
 }
 
@@ -88,7 +93,7 @@
 /*Hero text*/
 .hero_text {
   margin: 0 1rem;
-  width: 95%;
+
   height: 55%;
   display: flex;
 
@@ -119,12 +124,19 @@
   }
 }
 
+@media screen and (min-width:1520px) {
+  .hero_text {
+    h2 {
+      font-size: 7ex;
+    }
+  }
+
+}
+
 @media screen and (min-width:1320px) {
   .hero_text {
     h2 {
-      letter-spacing: 0.6rem;
       font-size: 4ex;
-      line-height: 1;
     }
   }
 
@@ -190,10 +202,16 @@
 
 .hero_face-img {
   font-size: 0;
-  height: 60rem;
   position: relative;
   max-width: none;
   width: auto;
+}
+@media screen and (min-width:1320px) {
+  .hero_face-img {
+    height: 86rem;
+    
+  }
+  
 }
 
 /*Hero rips*/
@@ -224,7 +242,7 @@
   left: 26%;
   position: absolute;
   top: 14vmin;
-  max-width: 18rem;
+  max-width: 20vw;
   transform: translateZ(366px) scale(1);
   z-index: -1;
 }
@@ -275,7 +293,7 @@
 .branch {
   left: 0%;
   position: absolute;
-  top: 22vmin;
+  top: 35vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
   max-width: 23vw;
