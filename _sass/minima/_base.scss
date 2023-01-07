@@ -112,27 +112,35 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
+  letter-spacing: 0.125rem;
   color: $link-base-color;
   text-decoration: none;
-
-  &:visited {
-    color: $link-visited-color;
-  }
-
+  font-family: $title-font-family;
+  font-weight: 900;
+  text-transform: uppercase;
+  
   &:hover {
     color: $link-hover-color;
-    text-decoration: underline;
+    //
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
+      ///
     }
   }
 }
 
+.brand{
+  margin: 0;
+  font-family: $base-font-family;
+  font-weight: 900;
+  color: $lm-link-base-color;
+  font-size: 3.5rem;
+  text-transform: lowercase;
+}
 
 /**
  * Blockquotes

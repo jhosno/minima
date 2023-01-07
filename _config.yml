@@ -1,36 +1,38 @@
-title: Your awesome title
+title: Amanda Escalona
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Amanda Escalona 
+  email: amandaescalona30@gmail.com
+tag: creative writer
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ 🦉🤓Nerd freelancer: Redactora de contenido, copy writer, community manager, escritora por las noches 🦇 y lectora ávida ⚡. ¡Lista para generar contenido persuasivo que aumente tus ventas!🖤
+
+
+
+bio: >
+ "¿Ratón de biblioteca? Es posible, tanto así que he vivido gran parte de mi vida con un libro debajo del brazo. Entonces quise hacer de la literatura mi vida y estudié letras en la Universidad Católica Andrés Bello. Luego de eso me encontré, de un golpe inesperado, con el marketing, entonces uní mi amor por escribir, con el amor por la tecnología y la comunicación, y me convertí en mi yo de ahora: Redactora de contenido, community manager, escritora por las noches y lectora ávida. He escrito de todo un poco, desde tecnología, hasta medicina y psicología infantil. Asimismo, me gusta investigar, estudiar el tema que estoy trabajando y escribir con la mayor fidelidad posible, es decir, siempre hago un estudio de vocabulario oterminología antes de realizar el trabajo."
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
+
+defaults:
+  - scope:
+      path: "assets/images"
+      type: 'image'
+    values:
+      image: true
+
 # Minima date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this\
+
+
 minima:
   date_format: "%b %-d, %Y"
 
   # generate social links in footer
-  social_links:
-    - { platform: devto,          user_url: "https://dev.to/jekyll" }
-    - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
-    - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
-    - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
-    - { platform: github,         user_url: "https://github.com/jekyll/minima" }
-    - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
-    - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
-    - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
+  social_links:   
+    - { platform: instagram,      user_url: "https://www.instagram.com/amanda_nadhia/" }
     - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
-    - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
-    - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
-    - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
     - { platform: telegram,       user_url: "https://t.me/jekyll" }
-    - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
-    - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -43,3 +45,4 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+

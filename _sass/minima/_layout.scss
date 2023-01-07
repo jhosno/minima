@@ -1,12 +1,283 @@
 /**
  * Site header
  */
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 1ch;
+
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 2rem;
+
+  div {
+    width: 20%;
+    text-align: center;
+  }
+
+  div:first-child {
+    width: 40%;
+    text-align: left;
+    font-size: 0.75rem;
+
+    a {
+      margin-right: 2.1rem;
+    }
+  }
+
+  div:last-child {
+    text-align: right;
+    width: 40%;
+
+    a {
+      @include btn($lm-link-base-color, $lm-highligh-color);
+    }
+  }
+}
+
+.hero_wrap,
+.hero_inner {
+  height: 38rem;
+  width: 100%;
+}
+
+.hero_wrap {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+@media screen and (min-width: 1240px) {
+  .hero_wrap,
+  .hero_inner {
+    height: 88vh;
+  }
+}
+
+
+
+.hero_inner {
+  height: 100%;
+}
+
+.hero_bg-wrap {
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.hero__bg,
+.hero__bg-wrap {
+  height: 100%;
+  width: 100%;
+  -moz-transform-style: preserve-3d;
+}
+
+
+.hero__bg-wrap {
+  pointer-events: none;
+}
+
+.hero_text {
+  margin: 0 1rem;
+  width:95%;
+  height: 55%;
+  display: flex;
+  
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: stretch;
+
+  h1,
+  h2 {
+    font-weight: 900;
+    color: #f3f6ed;
+    font-family: $title-font-family;
+    letter-spacing: 0.6rem;
+    font-size: 3ex;
+  }
+
+  h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 9.5rem;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+.hero_name{
+  padding-top: 2rem;
+  display: flex;
+  width: 100%;
+  img{
+    &:first-child
+    {
+      margin-right: 5%;
+      width: 45%;
+    }
+    width: 50%;
+  }
+}
+
+
+.hero_bg {
+  height: 100%;
+  position: relative;
+
+  &:before {
+
+    z-index: -9999999;
+    bottom: 0;
+    content: "";
+    left: 0;
+    background: url(../images/BG.png) center top / cover no-repeat fixed;
+    position: absolute;
+    right: 0;
+    /*transform: translateZ(-300px) scale(10);*/
+    top: 0;
+  }
+}
+
+.hero_face {
+  animation: face 1s steps(1);
+  bottom: 14vmin;
+  left: 48%;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-50%) translateZ(320px) scale(.65);
+  transform-origin: 50% 50%;
+}
+
+.hero_face-img {
+  font-size: 0;
+  height: 60rem;
+  position: relative;
+  max-width: none;
+  width: auto;
+}
+
+.hero-rips {
+  background: url(../images/rips.png);
+
+  background-repeat: repeat-x;
+  background-size: contain;
+  bottom: 0;
+  height: 9.2rem;
+  left: 0;
+  position: relative;
+  right: 0;
+  z-index: 2
+}
+
+.lightning{
+  left: 62%;
+  position: absolute;
+  top: 26vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: 1;
+}
+.moon{
+  left: 25%;
+  position: absolute;
+  top: 12vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+}
+.collage-1{
+  right: 0%;
+  position: absolute;
+  top: -1vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+  img{
+    height: 18rem;
+  }
+}
+.collage-2{
+  left: 6%;
+  position: absolute;
+  top: -1vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+  img{
+    height: 28rem;
+  }
+}
+.flower{
+  left: 62%;
+  position: absolute;
+  top: 0vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+  img{
+    height: 10rem;
+  }
+}
+.duck{
+  left: 59%;
+  position: absolute;
+  top: 17vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -2;
+
+  img{
+    height: 16rem;
+  }
+}
+.branch{
+  left: 0%;
+  position: absolute;
+  top: 22vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+
+  img{
+    height: 38rem;
+  }
+}
+.head{
+  right: 0%;
+  position: absolute;
+  top: 22vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+
+  height: 30vh;
+  img{
+    
+  }
+}
+.dot{
+  left: 16%;
+  position: absolute;
+  top: 36vmin;
+  transform: translateZ(366px) scale(1);
+  z-index: -1;
+  height: 30vh;
+  
+  img{
+    height: 15rem;
+  }
+}
+
 .site-header {
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
-
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -49,7 +320,7 @@
     padding-top: 10px;
     text-align: center;
 
-    > svg path {
+    >svg path {
       fill: $border-color-03;
     }
   }
@@ -63,12 +334,12 @@
     cursor: pointer;
   }
 
-  input ~ .trigger {
+  input~.trigger {
     clear: both;
     display: none;
   }
 
-  input:checked ~ .trigger {
+  input:checked~.trigger {
     display: block;
     padding-bottom: 5px;
   }
@@ -78,11 +349,13 @@
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
+    font-weight: 800;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 0;
     }
+
     margin-left: 20px;
   }
 
@@ -100,7 +373,7 @@
       display: none;
     }
 
-    input ~ .trigger {
+    input~.trigger {
       display: block;
     }
 
@@ -111,6 +384,7 @@
       &:not(:last-child) {
         margin-right: 20px;
       }
+
       margin-left: auto;
     }
   }
@@ -217,7 +491,7 @@
   margin-left: 0;
   list-style: none;
 
-  > li {
+  >li {
     margin-bottom: $spacing-unit;
   }
 }
@@ -255,7 +529,14 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
-  h1, h2, h3, h4, h5, h6 { margin-top: $spacing-unit }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: $spacing-unit
+  }
 
   h2 {
     @include relative-font-size(1.75);
@@ -280,6 +561,7 @@
   h5 {
     @include relative-font-size(1.125);
   }
+
   h6 {
     @include relative-font-size(1.0625);
   }
@@ -289,15 +571,23 @@
 .social-media-list {
   display: table;
   margin: 0 auto;
+
   li {
     float: left;
     margin: 5px 10px 5px 0;
-    &:last-of-type { margin-right: 0 }
+
+    &:last-of-type {
+      margin-right: 0
+    }
+
     a {
       display: block;
       padding: 10px 12px;
       border: 1px solid $border-color-01;
-      &:hover { border-color: $border-color-02 }
+
+      &:hover {
+        border-color: $border-color-02
+      }
     }
   }
 }
@@ -310,12 +600,16 @@
 .pagination {
   margin-bottom: $spacing-unit;
   @extend .social-media-list;
+
   li {
-    a, div {
+
+    a,
+    div {
       min-width: 41px;
       text-align: center;
       box-sizing: border-box;
     }
+
     div {
       display: block;
       padding: $spacing-unit * .25;
