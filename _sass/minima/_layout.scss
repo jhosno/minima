@@ -1,6 +1,8 @@
 /**
  * Site header
  */
+
+/*navbar*/
 .nav-bar {
   display: flex;
   flex-wrap: nowrap;
@@ -37,6 +39,7 @@
   }
 }
 
+/*hero wrap*/
 .hero_wrap,
 .hero_inner {
   height: 38rem;
@@ -52,6 +55,7 @@
 
 
 @media screen and (min-width: 1240px) {
+
   .hero_wrap,
   .hero_inner {
     height: 88vh;
@@ -60,6 +64,7 @@
 
 
 
+/*hero content*/
 .hero_inner {
   height: 100%;
 }
@@ -80,65 +85,84 @@
 .hero__bg-wrap {
   pointer-events: none;
 }
-
+/*Hero text*/
 .hero_text {
   margin: 0 1rem;
-  width:95%;
+  width: 95%;
   height: 55%;
   display: flex;
-  
+
   flex-direction: column;
   align-content: stretch;
   justify-content: space-between;
   align-items: stretch;
 
-  h1,
+
   h2 {
     font-weight: 900;
     color: #f3f6ed;
     font-family: $title-font-family;
     letter-spacing: 0.6rem;
     font-size: 3ex;
-  }
-
-  h1 {
-    font-size: 6rem;
-    text-align: center;
-    padding-top: 9.5rem;
-  }
-
-  h2 {
+    
     line-height: 1;
   }
-
-  div {
+  
+  div:last-child {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
     align-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
   }
 }
-.hero_name{
+
+@media screen and (min-width:1320px) {
+  .hero_text {
+    h2 {
+      letter-spacing: 0.6rem;
+      font-size: 4ex;
+      line-height: 1;
+    }
+  }
+
+}
+@media screen and (max-width:720px) {
+  .hero_text {
+    h2 {
+      letter-spacing: 0.6rem;
+      font-size: 1.7ex;
+      line-height: 1;
+    }
+  }
+}
+
+.hero_name {
   padding-top: 2rem;
   display: flex;
   width: 100%;
-  img{
-    &:first-child
-    {
+
+  img {
+    &:first-child {
       margin-right: 5%;
       width: 45%;
     }
+
     width: 50%;
   }
 }
 
+.hero {
+  position: static;
+}
 
+/*Hero BG*/
 .hero_bg {
   height: 100%;
   position: relative;
-
+  
   &:before {
 
     z-index: -9999999;
@@ -153,6 +177,7 @@
   }
 }
 
+/*Hero portrait*/
 .hero_face {
   animation: face 1s steps(1);
   bottom: 14vmin;
@@ -171,12 +196,13 @@
   width: auto;
 }
 
+/*Hero rips*/
 .hero-rips {
   background: url(../images/rips.png);
 
   background-repeat: repeat-x;
   background-size: contain;
-  bottom: 0;
+  bottom: 9rem;
   height: 9.2rem;
   left: 0;
   position: relative;
@@ -184,97 +210,99 @@
   z-index: 2
 }
 
-.lightning{
-  left: 62%;
+/*Hero elements*/
+.lightning {
+  left: 58%;
   position: absolute;
-  top: 26vmin;
+  top: 45vmin;
   transform: translateZ(366px) scale(1);
   z-index: 1;
+  max-width: 15vw;
 }
-.moon{
-  left: 25%;
+
+.moon {
+  left: 26%;
   position: absolute;
-  top: 12vmin;
+  top: 14vmin;
+  max-width: 18rem;
   transform: translateZ(366px) scale(1);
   z-index: -1;
 }
-.collage-1{
+
+.collage-1 {
   right: 0%;
   position: absolute;
   top: -1vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
-  img{
-    height: 18rem;
-  }
+  max-width: 12vw;
 }
-.collage-2{
+
+.collage-2 {
   left: 6%;
   position: absolute;
   top: -1vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
-  img{
-    height: 28rem;
-  }
+  max-width: 16vw;
 }
-.flower{
+
+.flower {
   left: 62%;
   position: absolute;
   top: 0vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
-  img{
+
+  img {
     height: 10rem;
   }
 }
-.duck{
-  left: 59%;
+
+.duck {
+  left: 56%;
   position: absolute;
-  top: 17vmin;
+  top: 16vmin;
   transform: translateZ(366px) scale(1);
   z-index: -2;
+  max-width: 25rem;
 
-  img{
-    height: 16rem;
+  img {
+    height: auto;
   }
 }
-.branch{
+
+.branch {
   left: 0%;
   position: absolute;
   top: 22vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
+  max-width: 23vw;
 
-  img{
-    height: 38rem;
-  }
+
 }
-.head{
+
+.head {
   right: 0%;
   position: absolute;
-  top: 22vmin;
+  top: 35vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
-
-  height: 30vh;
-  img{
-    
-  }
+  max-width: 22vw;
 }
-.dot{
+
+.dot {
   left: 16%;
   position: absolute;
-  top: 36vmin;
+  top: 58vmin;
   transform: translateZ(366px) scale(1);
   z-index: -1;
-  height: 30vh;
-  
-  img{
-    height: 15rem;
-  }
+  max-width: 12vw;
+
 }
 
+/*default minima rules */
 .site-header {
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
