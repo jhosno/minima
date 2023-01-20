@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+
+<body>
+
+  {%- include navbar.html -%}
+  <header class="site-header">
+
+    <section class="hero-section">
+
+
+      <div class="hero">
+        <div class="hero_wrap">
+          <div class="hero_inner">
+            <div class="hero_bg-wrap">
+              <div class="hero_bg">
+                <img src="" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-rips"></div>
+
+    </section>
+
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  {%- include footer.html -%}
+
+</body>
+
+</html>

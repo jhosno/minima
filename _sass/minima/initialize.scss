@@ -48,6 +48,11 @@ $on-large:         $on-laptop !default;
   background-color: $bg;
   color: $color;
   font-size: 0.75rem;
+  transition: all 1.2s ease-in-out;
+  &:hover{
+    color: $bg;
+    background-color: $color;
+  }
 }
 
 // Import pre-styling-overrides hook and style-partials.

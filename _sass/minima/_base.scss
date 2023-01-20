@@ -30,6 +30,7 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
+  max-width: 100%;
   flex-direction: column;
   overflow-wrap: break-word;
 }
@@ -134,14 +135,26 @@ a {
 }
 
 .brand{
-  margin: 0;
+  margin: auto;
   font-family: $base-font-family;
   font-weight: 900;
   color: $lm-link-base-color;
-  font-size: 3.5rem;
+/*  font-size: 3.5rem; */
   text-transform: lowercase;
 }
-
+.brand:hover .cls-1{
+  animation: color-me-in 2.5s infinite alternate ;
+}
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  0% {
+    fill: $lm-link-base-color;
+  }
+  /* You could think of as "step 2" */
+  100% {
+    fill: $lm-highligh-color;
+  }
+}
 /**
  * Blockquotes
  */
