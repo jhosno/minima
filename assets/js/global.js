@@ -6,3 +6,12 @@ btnBuger.addEventListener('click', () => {
   menulink.classList.toggle('visible-flex')
   console.log('btn menu')
 })
+
+
+///form 
+
+
+let carousel = document.getElementsByClassName('testimonials-container')
+console.log(carousel)
+
+
