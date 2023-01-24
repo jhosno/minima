@@ -16,12 +16,12 @@ layout: default
     </h2>
 
   </section>
-  <section id="last-posts">
+  <section id="last-projects">
     <h2>
       Casos de éxito
     </h2>
     <div class="post-wrapper">
-      {% for post in site.posts limit:2 %}
+      {% for post in site.tags.proyecto limit:2 %}
       <div class="post-card">
         <a href="{{ site.url }}{{ post.url }}">
           <div class="img-container">
@@ -33,34 +33,54 @@ layout: default
         </a>
       </div>
       {% endfor %}
-      </div>
-
     </div>
 
-  </section>
 
-  <section id="aboutus">
-    <div class="image-content">
-      <img src="/assets/images/amanda.jpg" alt="">
+</section>
+
+<section id="aboutus">
+  <div class="image-content">
+    <img src="/assets/images/amanda.jpg" alt="">
+  </div>
+  <div class="text-content">
+    <div>
+      <p>
+        I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate:
+        running your business, growing it, keeping up with the latest trends.
+      </p>
+      <a href="/about/">Conoce más </a>
+
     </div>
-    <div class="text-content">
-      <div>
-        <p>
-          I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate: running your business, growing it, keeping up with the latest trends.
-        </p>
-        <a href="/about/">Conoce más </a>
+  </div>
+</section>
 
-      </div>
+{%- include testimonials.html -%}
+<section id="last-posts">
+  <h2>
+    Casos de éxito
+  </h2>
+  <div class="post-wrapper">
+    {% for post in site.tags.post limit:3 %}
+    <div class="post-card">
+      <a href="{{ site.url }}{{ post.url }}">
+        <div class="img-container">
+          <img src="assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
+        </div>
+        <h3>
+          {{ post.title }}
+        </h3>
+      </a>
     </div>
-  </section>
+    {% endfor %}
+  </div>
 
-  {%- include testimonials.html -%}
-<section id="projects">
-  <h3>Posts que he escrito</h3>
+
 </section>
 
 <section id="urania">
   <h3>Puedes conocer más de mis emprendimientos:</h3>
+  <div>urania</div>
+  <div>Sphynx's Chaos</div>
 </section>
 
 </div>
