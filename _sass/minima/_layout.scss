@@ -10,6 +10,7 @@ section {
 #navbar-wrap {
   margin: 0;
 }
+
 @media screen and (max-width: 768px) {
   #navbar-wrap {
     overflow: hidden;
@@ -334,6 +335,7 @@ section {
 
     div:last-child {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
@@ -566,14 +568,16 @@ section {
   h2 {
     font-family: "Unbounded", cursive;
     font-size: 2.5rem;
-    span{
-      transition: all .6s ;
+
+    span {
+      transition: all .6s;
     }
+
     span:nth-child(1) {
       font-weight: 900;
       letter-spacing: -0.2rem;
     }
-    
+
     span:nth-child(2) {
       letter-spacing: 0.6rem;
     }
@@ -583,12 +587,13 @@ section {
       color: $lm-link-base-color;
       letter-spacing: -0.2rem;
     }
-    
+
     span:nth-child(5) {
       color: $lm-link-base-color;
       letter-spacing: 0.6rem;
     }
-    span:hover{
+
+    span:hover {
       color: $lm-highligh-color;
       cursor: crosshair;
       transform: scale(1.3);
@@ -597,89 +602,101 @@ section {
 }
 
 /////////about us
-#aboutus{
+#aboutus {
   display: flex;
 
-  .image-content{
+  .image-content {
     width: 60%;
     margin-right: 1.5rem;
-    img{}
+
+    img {}
   }
-  .text-content{
+
+  .text-content {
     width: 40%;
-    div{
+
+    div {
 
       top: 30rem;
       bottom: auto;
       position: sticky;
-      
+
     }
-    p{}
-    a{
+
+    p {}
+
+    a {
       @include btn($lm-background-color, $lm-brand-color);
-      svg{
-   
-      }
+
+      svg {}
     }
   }
 }
+
 /////////last projects 
 #last-projects {
   display: flex;
   flex-direction: column;
-  .post-wrapper{
+
+  .post-wrapper {
     display: flex;
     flex-direction: row;
   }
+
   .post-card {
     width: 48%;
 
-    &:first-child{
+    &:first-child {
       margin-right: 1rem;
     }
-  
+
     .img-container {
-      height:30.9375em; 
+      height: 30.9375em;
       margin-bottom: 2rem;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-content: center;
-          img {
+
+      img {
         height: 100%;
         width: 100%;
-    
+
       }
     }
   }
 }
+
 /////////last post 
 #last-posts {
   display: flex;
   flex-direction: column;
-  .post-wrapper{
+
+  .post-wrapper {
     display: flex;
     flex-direction: row;
   }
+
   .post-card {
     width: 33.3333%;
     margin-right: 1rem;
-    
-    &:last-child{
+
+    &:last-child {
       margin-right: 0rem;
     }
-  
+
     .img-container {
-      height:30.9375em; 
+      height: 30.9375em;
       margin-bottom: 2rem;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-content: center;
-          img {
+
+      img {
         height: 100%;
         width: 100%;
-    
+
       }
     }
   }
@@ -1118,7 +1135,7 @@ section {
   }
 
   .content {
-    transition: all 1s ease-in;
+    transition: all .3s ease-in-out;
     padding: 1rem .6rem;
     text-align: justify;
 
@@ -1134,13 +1151,13 @@ section {
   .testimonials-container {
     display: flex;
     flex-direction: column;
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
     padding: 0 .5rem;
     cursor: pointer;
     width: 12%;
 
     .nt-line {
-      transition: all 1s ease-in;
+      transition: all .5s ease-in;
       background-color: #fff;
       height: 0.125rem;
       width: 100%;
@@ -1174,7 +1191,7 @@ section {
     .img-wrapper {
       height: 31.125em;
       width: 100%;
-      background: $lm-highligh-color;
+  
       overflow: hidden;
       display: flex;
       align-content: center;
@@ -1187,7 +1204,7 @@ section {
       }
 
       img:hover {
-        transition: all .5s ease-in;
+        transition: all .3s ease-in;
         transform: scale(1.3);
       }
     }
@@ -1242,6 +1259,8 @@ section {
       img {
         max-width: 57.5em;
         min-height: 100%;
+        width: 100%;
+        height: fit-content;
         filter: grayscale(0%);
       }
 
