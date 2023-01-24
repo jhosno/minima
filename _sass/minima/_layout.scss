@@ -627,9 +627,13 @@ section {
 /////////last post 
 #last-posts {
   display: flex;
-
+  flex-direction: column;
+  .post-wrapper{
+    display: flex;
+    flex-direction: row;
+  }
   .post-card {
-    width: 50%;
+    width: 48%;
     
     &:first-child{
       margin-right: 1rem;
@@ -1100,7 +1104,7 @@ section {
   .testimonials-container {
     display: flex;
     flex-direction: column;
-    transition: all 1s ease-in;
+    transition: all .3s ease-in;
     padding: 0 .5rem;
     cursor: pointer;
     width: 12%;
@@ -1118,7 +1122,7 @@ section {
 
     h2 {
       font-size: .8rem;
-      transition: all 1s ease-in;
+      transition: all .5s ease-in;
 
     }
 
@@ -1153,7 +1157,7 @@ section {
       }
 
       img:hover {
-        transition: all 1s ease-in;
+        transition: all .5s ease-in;
         transform: scale(1.3);
       }
     }

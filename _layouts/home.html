@@ -14,25 +14,29 @@ layout: default
       who helps business owners get their sales goals
       📈💸💰💯.
     </h2>
-    <p>I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate:
-      running your business, growing it, keeping up with the latest trends... and then there's the whole "owning your
-      own
-      time" thing.</p>
+
   </section>
   <section id="last-posts">
+    <h2>
+      Casos de éxito
+    </h2>
+    <div class="post-wrapper">
+      {% for post in site.posts limit:2 %}
+      <div class="post-card">
+        <a href="{{ site.url }}{{ post.url }}">
+          <div class="img-container">
+            <img src="assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
+          </div>
+          <h3>
+            {{ post.title }}
+          </h3>
+        </a>
+      </div>
+      {% endfor %}
+      </div>
 
-    {% for post in site.posts limit:2 %}
-    <div class="post-card">
-      <a href="{{ site.url }}{{ post.url }}">
-        <div class="img-container">
-          <img src="assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
-        </div>
-        <h3>
-          {{ post.title }}
-        </h3>
-      </a>
     </div>
-    {% endfor %}
+
   </section>
 
   <section id="aboutus">
@@ -44,8 +48,7 @@ layout: default
         <p>
           I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate: running your business, growing it, keeping up with the latest trends.
         </p>
-        <a href="/about.md">Conoce más 
-          <svg fill="#000000" width="30px" height="30px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" id="memory-arrow-right"><path d="M17 10V12H16V13H15V14H14V15H13V16H11V14H12V13H13V12H4V10H13V9H12V8H11V6H13V7H14V8H15V9H16V10" /></svg></a>
+        <a href="/about/">Conoce más </a>
 
       </div>
     </div>

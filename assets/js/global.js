@@ -15,7 +15,10 @@ let carousel = document.getElementsByClassName('testimonials-container')
 let counter
 for (counter = 0; counter < carousel.length; counter++) {
   carousel[counter].addEventListener("click", function () {
-    this.classList.toggle("active");
+    carousel[0].classList.remove('active');
+    carousel[1].classList.remove('active');
+    carousel[2].classList.remove('active');
+    this.classList.add("active");
     console.log(this)
   });
 }
