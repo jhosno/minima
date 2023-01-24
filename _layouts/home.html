@@ -4,43 +4,60 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
+  <section id="hello">
+    <h2>
+      I'm <span>Amanda</span> <span>Escalona</span>,🙋‍♀️ </br>
+      a <span>copywriter</span> and <span>content marketer</span> 🤩
+      </br>
+      who helps business owners get their sales goals
+      📈💸💰💯.
+    </h2>
+    <p>I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate:
+      running your business, growing it, keeping up with the latest trends... and then there's the whole "owning your
+      own
+      time" thing.</p>
+  </section>
+  <section id="last-posts">
 
-  <p>I'm Amanda Escalona, a copywriter and content marketer 🙋‍♀️ who helps business owners get their sales goals 📈💸💰💯.</p>
-  <p>I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate: running your business, growing it, keeping up with the latest trends... and then there's the whole "owning your own time" thing.</p>
-  {{ content }}
+    {% for post in site.posts limit:2 %}
+    <div class="post-card">
+      <a href="{{ site.url }}{{ post.url }}">
+        <div class="img-container">
+          <img src="assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
+        </div>
+        <h3>
+          {{ post.title }}
+        </h3>
+      </a>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="aboutus">
+    <div class="image-content">
+      <img src="/assets/images/amanda.jpg" alt="">
+    </div>
+    <div class="text-content">
+      <div>
+        <p>
+          I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate: running your business, growing it, keeping up with the latest trends.
+        </p>
+        <a href="/about.md">Conoce más 
+          <svg fill="#000000" width="30px" height="30px" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" id="memory-arrow-right"><path d="M17 10V12H16V13H15V14H14V15H13V16H11V14H12V13H13V12H4V10H13V9H12V8H11V6H13V7H14V8H15V9H16V10" /></svg></a>
+
+      </div>
+    </div>
+  </section>
 
   {%- include testimonials.html -%}
+<section id="projects">
+  <h3>Posts que he escrito</h3>
+</section>
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-  {%- endif -%}
+<section id="urania">
+  <h3>Puedes conocer más de mis emprendimientos:</h3>
+</section>
 
 </div>

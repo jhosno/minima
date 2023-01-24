@@ -12,6 +12,15 @@ btnBuger.addEventListener('click', () => {
 
 
 let carousel = document.getElementsByClassName('testimonials-container')
-console.log(carousel)
+let counter
+for (counter = 0; counter < carousel.length; counter++) {
+  carousel[counter].addEventListener("click", function () {
+    this.classList.toggle("active");
+    console.log(this)
+  });
+}
 
 
+for (const [key, value] of Object.entries(carousel)) {
+  console.log(`${key}: ${value}`);
+}
