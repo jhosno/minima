@@ -140,10 +140,11 @@ a {
   font-weight: 900;
   color: $lm-link-base-color;
 /*  font-size: 3.5rem; */
+
   text-transform: lowercase;
 }
 .brand:hover .cls-1{
-  animation: color-me-in 2.5s infinite alternate ;
+  animation: color-me-in 1s infinite alternate ;
 }
 @keyframes color-me-in {
   /* You could think of as "step 1" */
