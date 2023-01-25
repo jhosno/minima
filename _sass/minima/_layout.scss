@@ -1231,7 +1231,7 @@ section {
   }
 
   .content {
-    transition: all .3s ease-in-out;
+    transition: all .3s cubic-bezier(0, 0.34, 1, -0.24);
     padding: 1rem .6rem;
     text-align: justify;
 
@@ -1266,7 +1266,7 @@ section {
     }
 
     .nt-line {
-      transition: all .5s ease-in;
+      transition: all .3s cubic-bezier(0, 0.34, 1, -0.24);
       background-color: #fff;
       height: 0.125rem;
       width: 100%;
@@ -1278,7 +1278,7 @@ section {
 
     h2 {
       font-size: .8rem;
-      transition: all .5s ease-in;
+      transition: all .3s cubic-bezier(0, 0.34, 1, -0.24);
 
     }
 
@@ -1320,7 +1320,7 @@ section {
   }
 
   .active {
-    transition: all 1s ease-in;
+    transition: all .3s cubic-bezier(0, 0.34, 1, -0.24);
     width: 71%;
 
     @media screen and (max-width: 768px) {
