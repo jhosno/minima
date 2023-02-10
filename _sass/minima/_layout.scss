@@ -238,6 +238,7 @@ section {
 .hero_inner {
   height: 38rem;
   width: 100%;
+
   @media screen and (max-width: 655px) {
     height: 25rem;
   }
@@ -279,8 +280,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 667px) {
-    & .hero-post{
+    & .hero-post {
       width: 88rem;
       height: 100%;
       max-width: 88rem;
@@ -596,6 +598,7 @@ section {
   h2 {
     font-family: "Unbounded", cursive;
     font-size: 2.5rem;
+    line-height: 2.8rem;
 
     span {
       transition: all .6s;
@@ -923,7 +926,7 @@ section {
             height: 100%;
             width: 88rem;
             max-width: 88rem;
-            padding-bottom: 0 ;
+            padding-bottom: 0;
           }
         }
       }
@@ -1332,11 +1335,11 @@ section {
   letter-spacing: -1px;
   line-height: 1.15;
   color: $lm-link-base-color;
-  
+
   @media screen and (min-width: $on-large) {
     @include relative-font-size(2.625);
   }
-  
+
   @media screen and (max-width: 655px) {
     font-size: 2rem;
   }
@@ -1357,8 +1360,9 @@ section {
   align-content: center;
   flex-direction: row;
   justify-content: space-between;
+
   @media screen and (max-width:658px) {
-    &{
+    & {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -1367,6 +1371,10 @@ section {
 
 .post-content {
   padding: 0 4rem;
+
+  @media screen and (max-width:655px) {
+    padding: 0 1rem;
+  }
 
   p {
     text-align: justify;
@@ -1481,6 +1489,19 @@ section {
 
 
 #contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 0px;
+
+  .email{
+    grid-area: 2 / 1 / 3 / 3;
+    grid-area: 2/1/3/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   h3 {
     margin-bottom: 2rem;
   }
@@ -1491,7 +1512,7 @@ section {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-
+    width: 80%;
     button {
       text-transform: uppercase;
       margin-top: 1.3331rem;
@@ -1508,8 +1529,9 @@ section {
     textarea {
       margin-bottom: 0.3331rem;
       padding: 1.3331rem;
-      font-family: $base-font-family;
+      font-family: "Anybody", cursive;
       font-size: 1rem;
+      border: solid 0.1em;
     }
 
     span {
