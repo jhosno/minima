@@ -227,7 +227,7 @@ pre {
   padding-right: $spacing-unit * .5;
   padding-left: $spacing-unit * .5;
   @extend %clearfix;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @media screen and (min-width: $on-large) {
     max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
