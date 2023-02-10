@@ -8,19 +8,22 @@ layout: simple
 
   <div class='last-sticky'>
     {%- for post in site.tags.post limit:1 -%}
-    <div>
-      <img src="../assets/images/posts/{{post.image}}" alt="{{post.title}}" height="656" width="656">
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
+
+    <a class="post-link" href="{{ post.url | relative_url }}">
+      <div class="img-post-container">
+        <img src="../assets/images/posts/{{post.image}}" alt="{{post.title}}" class="main-img">
+        <img src="../assets/images/rips.png" class="last-rips" alt="{{post.title}}">
+      </div>
+      <h4>
+        {{ post.title | escape }}
+      </h4>
       {%- if site.show_excerpts -%}
       {{ post.excerpt }}
       {%- endif -%}
 
       {%- endfor -%}
-    </div>
+    </a>
+
 
   </div>
 
