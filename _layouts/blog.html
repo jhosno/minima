@@ -12,7 +12,7 @@ layout: simple
     <a class="post-link" href="{{ post.url | relative_url }}">
       <div class="img-post-container">
         <img src="../assets/images/posts/{{post.image}}" alt="{{post.title}}" class="main-img">
-        <img src="../assets/images/rips.png" class="last-rips" alt="{{post.title}}">
+        <div class="last-rips"></div>
       </div>
       <h4>
         {{ post.title | escape }}
