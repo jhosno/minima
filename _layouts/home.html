@@ -36,60 +36,60 @@ layout: default
     </div>
 
 
-</section>
+  </section>
 
-<section id="aboutus">
-  <div class="image-content">
-    <img src="/assets/images/amanda.jpg" alt="">
-  </div>
-  <div class="text-content">
-    <div>
-      <p>
-        I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate:
-        running your business, growing it, keeping up with the latest trends.
-      </p>
-      <a href="/about/">Conoce más </a>
-
+  <section id="aboutus">
+    <div class="image-content">
+      <img src="/assets/images/amanda.jpg" alt="">
     </div>
-  </div>
-</section>
+    <div class="text-content">
+      <div>
+        <p>
+          I know you're busy--and I want to take the burden off your shoulders. You've got so many things on your plate:
+          running your business, growing it, keeping up with the latest trends.
+        </p>
+        <a href="/about/">Conoce más </a>
 
-{%- include testimonials.html -%}
+      </div>
+    </div>
+  </section>
+
+  {%- include testimonials.html -%}
 
 
-<section id="last-posts">
-  <h2>
-    Artículos que he escrito 
-  </h2>
-  <div class="post-wrapper">
-    {% for post in site.tags.post limit:3 %}
-    <div class="post-card">
-      <a href="{{ site.url }}{{ post.url }}">
-        <div class="img-container">
-          <img src="./assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
-        </div>
-        <h5>
-          {{ post.title }}
-        </h5>
+  <section id="last-posts">
+    <h2>
+      Artículos que he escrito
+    </h2>
+    <div class="post-wrapper">
+      {% for post in site.tags.post limit:3 %}
+      <div class="post-card">
+        <a href="{{ site.url }}{{ post.url }}">
+          <div class="img-container">
+            <img src="./assets/images/posts/{{post.image}}" alt="{{ page.alt }}"><br>
+          </div>
+          <h5>
+            {{ post.title }}
+          </h5>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </section>
+
+  <section id="urania">
+    <h2>Conoce más de mis emprendimientos</h2>
+    <div id="side-projects">
+      <a href="https://www.instagram.com/sphynxschaos/" target="_blank" rel="noopener noreferrer">
+        <div>S</div>
+      </a>
+      <a href="https://www.instagram.com/urania.digital/" target="_blank" rel="noopener noreferrer">
+        <div>U</div>
       </a>
     </div>
-    {% endfor %}
-  </div>
 
-
-</section>
-
-<section id="urania">
-  <h2>Conoce más de mis emprendimientos</h2>
-  <div id="side-projects">
-    <a href="https://www.instagram.com/sphynxschaos/" target="_blank" rel="noopener noreferrer">
-      <div>S</div>
-    </a>
-    <a href="https://www.instagram.com/urania.digital/" target="_blank" rel="noopener noreferrer">
-      <div>U</div>
-    </a>
-  </div>
-
-</section>
+  </section>
 
 </div>
