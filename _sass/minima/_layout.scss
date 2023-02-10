@@ -653,8 +653,7 @@ section {
   .text-content {
     width: 40%;
     padding: 3rem 1rem 2rem 1rem;
-
-
+    
     div {
       position: -webkit-sticky;
       position: sticky;
@@ -664,8 +663,15 @@ section {
       right: 0;
       padding-top: 3rem
     }
-
-    p {}
+    
+    @media screen and (max-width: 655px) {
+      padding: 0;
+      div{
+        position: static;
+        padding-top: 0
+      }
+    }
+  
 
     a {
       @include btn($lm-background-color, $lm-brand-color);
@@ -1170,6 +1176,9 @@ section {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 }
 
 #side-projects {
