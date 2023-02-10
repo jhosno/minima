@@ -269,8 +269,16 @@ section {
   height: 100%;
   width: 100%;
   -moz-transform-style: preserve-3d;
-}
 
+}
+.hero-post{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 
 .hero__bg-wrap {
   pointer-events: none;
@@ -928,6 +936,35 @@ section {
 
 
 /**
+ * Urania
+ */
+#urania{
+  display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;  
+}
+#side-projects{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;  
+  div{
+    height:5rem;
+    width: 5rem;
+    background: red;
+    margin-left: 1.2rem;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  div:hover{
+    transform: scale(1.1);
+  }
+  
+}
+
+/**
  * Site footer
  */
 .site-footer {
@@ -1067,8 +1104,26 @@ section {
     @include relative-font-size(2.625);
   }
 }
-
+.post-cat{
+  span{
+    padding: .5rem .8rem;
+    background: lightblue;
+    margin-right: 1rem;
+    border-radius: 60px;
+  }
+}
+.post-header-top{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .post-content {
+  padding: 0 4rem;
+  p{
+    text-align: justify;
+  }
   margin-bottom: $spacing-unit;
 
   h1,
