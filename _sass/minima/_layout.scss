@@ -45,7 +45,7 @@ section {
 @media screen and (max-width: 768px) {
   .nav-bar {
     flex-wrap: wrap;
-    padding: 0 2rem;
+    padding:1.8rem;
 
   }
 }
@@ -124,6 +124,7 @@ section {
 
   .portfolio-btn {
     @include btn($lm-link-base-color, $lm-highligh-color);
+    &{padding: 0.5rem 0.8rem;}
   }
 }
 
@@ -140,7 +141,7 @@ section {
   background: transparent;
   position: relative;
   cursor: pointer;
-  margin: 2rem;
+  margin: 0rem 1.5rem;
 
   &:focus {
     outline: none;
@@ -242,6 +243,9 @@ section {
   @media screen and (max-width: 655px) {
     height: 25rem;
   }
+  @media screen and (max-width: 420px) {
+    height: 36rem;
+  }
 }
 
 .hero_wrap {
@@ -332,6 +336,7 @@ section {
     flex-wrap: nowrap;
     flex-direction: row;
   }
+
 }
 
 @media screen and (min-width:1520px) {
@@ -354,6 +359,11 @@ section {
 }
 
 @media screen and (max-width:720px) {
+  .hero_text {
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (max-width:420px) {
   .hero_text {
     height: 25%;
 
@@ -382,6 +392,9 @@ section {
     }
 
     width: 50%;
+  }
+  @media screen and (max-width: 420px) {
+    padding-bottom: 2rem;
   }
 }
 
@@ -509,6 +522,11 @@ section {
   transform: translateZ(366px) scale(1);
   z-index: 1;
   max-width: 15vw;
+  @media screen and (max-width: 420px) {
+    left: 66%;
+    top: 94vmin;
+    max-width: 21vw;
+  }
 }
 
 .moon {
@@ -518,6 +536,14 @@ section {
   max-width: 20vw;
   transform: translateZ(366px) scale(1);
   z-index: -1;
+  @media screen and (max-width:420px) {
+    left: 33%;
+    position: absolute;
+    top: 29vmin;
+    max-width: 44vw;
+    transform: translateZ(366px) scale(1);
+    z-index: -1;
+  }
 }
 
 .collage-1 {
@@ -527,6 +553,13 @@ section {
   transform: translateZ(366px) scale(1);
   z-index: -1;
   max-width: 12vw;
+  @media screen and (max-width: 420px) {
+    right: 0%;
+
+    top: 51vmin;
+
+    max-width: 23vw;
+  }
 }
 
 .collage-2 {
@@ -536,6 +569,14 @@ section {
   transform: translateZ(366px) scale(1);
   z-index: -1;
   max-width: 16vw;
+  @media screen and (max-width: 420px) {
+    left: -3%;
+    position: absolute;
+    top: -1vmin;
+    transform: translateZ(366px) scale(1);
+    z-index: -1;
+    max-width: 29vw;
+  }
 }
 
 .flower {
@@ -547,6 +588,9 @@ section {
 
   img {
     height: 10rem;
+  }
+  @media screen and (max-width:420px) {
+    left: 33%;
   }
 }
 
@@ -570,7 +614,14 @@ section {
   transform: translateZ(366px) scale(1);
   z-index: -1;
   max-width: 23vw;
-
+  @media screen and (max-width: 420px) {
+    left: 0%;
+    position: absolute;
+    top: 80vmin;
+    transform: translateZ(366px) scale(1);
+    z-index: -1;
+    max-width: 31vw;
+  }
 
 }
 
