@@ -1,17 +1,23 @@
 let btnBuger = document.getElementById('ae_menu_opener')
 let menulink = document.getElementById('links-wrap')
-let navbarShadow  = document.getElementById('nav-bar-shadow')
-btnBuger.addEventListener('click', () => {
-  btnBuger.classList.toggle('on')
-  menulink.classList.toggle('visible-flex')
-  console.log('btn menu')
-  navbarShadow.classList.toggle('visible')
-})
+let navbarShadow = document.getElementById('nav-bar-shadow')
 navbarShadow.addEventListener('click', () => {
   btnBuger.classList.toggle('on')
   menulink.classList.toggle('visible-flex')
-  console.log('btn menu')
-  navbarShadow.classList.toggle('visible')
+
+  navbarShadow.style.display = "none";
+  navbarShadow.style.visibility = "hidden";
+})
+btnBuger.addEventListener('click', () => {
+  btnBuger.classList.toggle('on')
+  menulink.classList.toggle('visible-flex')
+
+  navbarShadow.style.display = "none";
+  navbarShadow.style.visibility = "hidden";
+  if (menulink.classList.contains("visible-flex")) {
+    navbarShadow.style.display = "block";
+    navbarShadow.style.visibility = "visible";
+  }
 })
 
 
@@ -34,6 +40,3 @@ for (counter = 0; counter < carousel.length; counter++) {
 for (const [key, value] of Object.entries(carousel)) {
   console.log(`${key}: ${value}`);
 }
-
-
-

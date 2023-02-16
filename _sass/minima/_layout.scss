@@ -6,12 +6,24 @@
 section {
   margin: 6rem 0;
 }
+
 #nav-bar-shadow {
-  background: #1616161c;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(53, 53, 53);
+
+  background-color: rgba(0, 0, 0, 0.4);
+  touch-action: auto;
   display: none;
-} 
+  visibility: hidden;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   section {
     margin: 3rem 0;
@@ -30,9 +42,10 @@ section {
     bottom: 0;
     width: 100%;
     background: $lm-background-color;
-    z-index: 3;
+    z-index: 99999;
     margin: 0;
     border-top: #3333331a solid 0.1rem;
+    cursor: pointer;
   }
 }
 
@@ -40,6 +53,7 @@ section {
   flex-wrap: nowrap;
   flex-direction: row;
   font-size: 1ex;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,8 +74,13 @@ section {
 .links-wrap {
   width: 40%;
   text-align: left;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   transition: all 1s ease-in-out;
+
+  @media screen and (max-width: 1024px) {
+    @include relative-font-size(.63);
+
+  }
 
   a {
     margin-right: 1.8rem;
@@ -212,8 +231,11 @@ section {
 .visible-flex {
   display: flex;
 }
+
 .visible {
-  display: block!important;
+
+  display: block;
+  visibility: visible;
 }
 
 .on {
@@ -1351,20 +1373,18 @@ section {
     justify-content: space-evenly;
     align-items: center;
 
-    @media screen and (max-width:420px) {
+    @media screen and (max-width:740px) {
       flex-direction: column;
     }
 
     div:first-child {
       width: 20%;
+
     }
 
     div:last-child {
-      width: 20%;
+      width: 35%;
 
-      @media screen {
-        width: 35%;
-      }
     }
 
     .links-wrap {
@@ -1373,7 +1393,7 @@ section {
       justify-content: space-evenly;
       align-items: center;
       align-content: center;
-      padding: 0;
+      padding: .2rem;
 
       @media screen and (max-width:420px) {
         flex-direction: column;
@@ -1700,13 +1720,14 @@ section {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 0px;
+  margin-top: 3rem;
 
   .email {
     grid-area: 2 / 1 / 3 / 3;
     grid-area: 2/1/3/3;
     display: flex;
     justify-content: center;
-    align-items: center;
+
   }
 
   h3 {
@@ -1723,7 +1744,7 @@ section {
 
     button {
       text-transform: uppercase;
-      margin-top: 1.3331rem;
+      //margin-top: 1.3331rem;
       font-weight: 800;
       border: none;
       @include btn($lm-link-base-color, $lm-highligh-color);
@@ -1743,7 +1764,7 @@ section {
     }
 
     span {
-      color: rgba(255, 0, 0, 0.733);
+
       display: none;
     }
 
@@ -1753,6 +1774,42 @@ section {
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: space-between;
+    }
+  }
+
+  .contact-img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: url('/assets/images/BG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    img {
+      width: 80%;
+      margin: auto;
+      padding: auto;
+    }
+  }
+
+  .hero-rips {
+    // bottom: 3.9rem;
+    //height: 3.2rem;
+  }
+
+  .contact-side {
+    div {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-top: 3rem;
+      padding-bottom: 5rem;
     }
   }
 }
