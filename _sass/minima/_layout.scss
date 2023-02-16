@@ -1373,18 +1373,30 @@ section {
     justify-content: space-evenly;
     align-items: center;
 
-    @media screen and (max-width:740px) {
+    @media screen and (max-width:750px) {
       flex-direction: column;
     }
 
     div:first-child {
       width: 20%;
-
+      margin: auto;
+      text-align: left;
+      @media screen and (max-width:750px) {
+        margin: auto;
+      text-align: center;
+        margin-bottom: 2rem;
+      }
     }
 
     div:last-child {
       width: 35%;
+      margin: auto;
+      text-align: right;
+      @media screen and (max-width:750px) {
+        margin: auto;
+      text-align: center;
 
+      }
     }
 
     .links-wrap {
@@ -1482,8 +1494,8 @@ section {
     padding: 0 ($spacing-unit * .5);
 
     &:first-child {
-      padding-right: $spacing-unit * .5;
-      padding-left: 0;
+      //padding-right: $spacing-unit * .5;
+      //padding-left: 0;
     }
 
     &:last-child {
