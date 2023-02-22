@@ -3,9 +3,18 @@ layout: simple
 ---
 
 
-<div class="main">
-
-    {{content}}
+<div class="main" id="about">
+    <div class="about-content">
+        <div class="about-img">
+            <div>
+                <img src="/assets/images/{{page.image}}" alt="">
+                <div class="rips"></div>
+            </div>
+        </div>
+        <div class="about-text">
+            {{content}}
+        </div>
+    </div>
   {%- include side-projects.html -%}
 
 </div>
