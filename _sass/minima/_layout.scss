@@ -1308,6 +1308,13 @@ section {
   @media screen and (max-width: 650px) {
     flex-direction: column;
   }
+  .text{
+
+    h2{
+      font-family: $title-font-family;
+      line-height: 1.2rem;
+    }
+  }
 }
 
 #side-projects {
